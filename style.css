@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0px 100px;
+	background-color: #eee;
+	background-image: url(back.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+*{
+	box-sizing: border-box;
+}
+/*--------header---------------*/
+.header{
+	width: 100%;
+	text-align: center;
+	font-family: 'Poiret One', cursive;
+	background-color: #fd5858;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 5px #444;
+	color: #fff;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h2{
+    font-size: 150%;
+    letter-spacing: 10px;
+}
+#mainTxt{
+	height: 50px;
+	width: 75%;
+	box-shadow: 0 2px 5px #444;
+	border-radius: 10px 0 0 10px;
+	border: none;
+	padding: 10px;
+	margin-top:20px;
+}
+#mainTxt:focus{
+	outline: none;
+}
+#Add{
+	padding: 16px;
+	box-shadow: 0px 2px 5px #444;
+	border-radius: 0 10px 10px 0;
+	background-color: #777;
+	cursor: pointer;
+    transition: 0.3s;
+    vertical-align: middle;
+    margin: 0;
+    color: #fff;
+}
+#Add:hover{
+	background-color: #555;
+
+}
+
+/*----------List--------------*/
+#list{
+	position: relative;
+}
+
+ul{
+	list-style: none;
+	width: 90%;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+
+}
+ul li{
+	padding: 10px 40px;
+	background-color: #555;
+	color: #fff;
+	border: 1px solid #444;
+	
+	border-radius: 5px;
+	font-size: 93%;
+	margin-bottom: 5px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+/*-----add & close button-----------*/
+.close {
+  position: absolute;
+  color: #999;
+  right: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 5px;
+  font-size: 130%;
+  top: 0;
+}
+
+.close:hover {
+ color: #fd5858;
+}
+
+.edit{
+  position: absolute;
+  right: 35px;
+  cursor: pointer;
+  bottom: 4px;
+  font-size: 90%;
+  transition: 0.3s;
+  color: #999;
+}
+.edit:hover{
+  color: #fff;
+}
+#editTxt{
+    height: 40px;
+    border-radius: 5px 0 0 5px; 
+    width: 60%;
+    outline: none;
+    border: 0;
+    padding: 5px;
+}
+#editBtn{
+	height: 40px;
+	width: 40px;
+	background: #555;
+	color: #fff;
+	border:0;
+}
+#editCan{
+	height: 40px;
+	width: 40px;
+    border-radius: 0 5px 5px 0; 
+	background: #555;
+	color: #fff;
+	border:0;
+}
+#editTopic{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(5,5,5,0.8);
+	padding: 20px;
+	position: absolute;
+	z-index: 1000;
+	top:0;
+	border-radius: 10px;
+	transition: 0.3s;
+	display: none;
+}
+#editTopic div{
+	top: 50%;
+	left: 20%;
+	width: 100%;
+	vertical-align: middle;
+	position: absolute;
+}
+
+#showStatus{
+	width: 100%;
+	text-align: center;
+	font-family: 'Poiret One', cursive;
+	background-color: #fd5858;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 5px #444;
+	color: #fff;
+}

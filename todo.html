@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h2>ToDo List</h2>
+    <input type="text" id="mainTxt" class="input" name="input" placeholder="Enter title here..">
+    <span onclick="newElement()" class="addBtn" id="Add"><i class="fa fa-plus" aria-hidden="true"></i></span>
+    
+  </div>
+
+<!--end of header div-->
+<div id="list">
+  <ul class="mainUl" id="myUL">
+    
+    
+  </ul>
+
+  <div id="editTopic">
+    <div>
+      <input type="text" name="edit" id="editTxt" placeholder="Enter new topic..">
+      <button onclick="editText()" id="editBtn"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <button onclick="cancelEdit()" id="editCan"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+
+<!--edit div-->
+
+<div id="showStatus">
+  <span id="status1"></span>
+  <span id="status2"></span>
+</div>
+
+
+</body>
+</html>
