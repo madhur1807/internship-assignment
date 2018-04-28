@@ -103,9 +103,9 @@ function displayActive(){
 		unchecked = 0;
 	}
 	var span1 = document.getElementById("status1");
-	status1.innerHTML = "No of completed todo items : " + checked;
+	status1.innerHTML = 'No of completed todo items : ${checked}';
 	var span2 = document.getElementById("status2");
-	status2.innerHTML = "No of pending todo items : " + unchecked;
+	status2.innerHTML = 'No of pending todo items : ${unchecked}';
 }
 
 function deleteItem(self){
