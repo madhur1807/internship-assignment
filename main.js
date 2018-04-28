@@ -109,18 +109,20 @@ function displayActive(){
 }
 
 function deleteItem(self){
+	var positionOfItem;
 	var target_li = self.parentElement;
 	var target_span = target_li.getElementsByTagName("span");
 	var item_name = target_span[0].innerHTML;
 	var item_array = JSON.parse(localStorage.getItem("items_list"));
-	for(let j=0; j<item_array.length;j++){
-		if(item_array[j] == item_name){
-			item_array.splice(j,1);
-			localStorage.setItem("items_list", JSON.stringify(item_array));
-			getItemArray();
-			displayActive();
+	item_array.forEach(v =>{
+		if(v == item_name){
+			positionOfItem = item_array.indexOf(v);
 		}
-	}
+	});
+	item_array.splice(positionOfItem,1);
+	localStorage.setItem("items_list", JSON.stringify(item_array));
+	getItemArray();
+	displayActive();
 }
 
 function editItem(self){
@@ -131,11 +133,11 @@ function editItem(self){
 	var edit_box = document.getElementById('editTopic');
     edit_box.style.display = "block";
     var item_array = JSON.parse(localStorage.getItem("items_list"));
-	for(let j=0; j<item_array.length;j++){
-		if(item_array[j] == item_name){
-			window.positon = j;
-		}
-	}
+    item_array.forEach(v=>{
+    	if(v == item_name){
+    		window.positon = item_array.indexOf(v);
+    	}
+    });
 }
 
 function cancelEdit(){

@@ -127,7 +127,7 @@ ul li.checked::before {
   position: absolute;
   right: 35px;
   cursor: pointer;
-  bottom: 4px;
+  bottom: 17px;
   font-size: 90%;
   transition: 0.3s;
   color: #999;
